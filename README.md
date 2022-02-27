@@ -15,4 +15,13 @@ Os projetos de interação com usuário web api e console app chamam a função 
 - Swashbuckle Swagger 
 
 # Instruções para executar o projeto 
-Para executar basta clonar o projeto ou baixar os arquivos, se for executar via Visual Studio (F5 ou CTRL + F5).
+Para executar basta clonar o projeto ou baixar os arquivos, se for executar via Visual Studio (F5 ou CTRL + F5), ou se preferir executar no Visual Code via linha de comando:
+
+```
+dotnet restore
+```
+```
+dotnet run
+```
+Visual Studio: https://localhost:44364/swagger/index.html
+Visual Code: http://localhost:5000/swagger/index.html
