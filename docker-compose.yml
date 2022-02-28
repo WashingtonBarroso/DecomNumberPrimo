@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+   decomnumber.api:
+    image: ${DOCKER_REGISTRY-}decomnumber.api
+    build:
+      context: .
+      dockerfile: src\Company.DecomNumber.Api\Dockerfile

@@ -13,9 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Company.DecomNumber.Api", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Tests", "3 - Tests", "{CA6DDED4-857A-4E6D-8658-759978911EA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.DecomNumber.Lib", "src\Company.DecomNumber.Lib\Company.DecomNumber.Lib.csproj", "{BA866D57-AC70-471C-A392-319051509563}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Company.DecomNumber.Lib", "src\Company.DecomNumber.Lib\Company.DecomNumber.Lib.csproj", "{BA866D57-AC70-471C-A392-319051509563}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.DecomNumber.Tests", "tests\Company.DecomNumber.Tests\Company.DecomNumber.Tests.csproj", "{B003F546-1552-4872-BD68-40ABF2DECD51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Company.DecomNumber.Tests", "tests\Company.DecomNumber.Tests\Company.DecomNumber.Tests.csproj", "{B003F546-1552-4872-BD68-40ABF2DECD51}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{3C50F488-63D6-423B-9A9C-1CEBABDA3A33}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{B003F546-1552-4872-BD68-40ABF2DECD51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B003F546-1552-4872-BD68-40ABF2DECD51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B003F546-1552-4872-BD68-40ABF2DECD51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C50F488-63D6-423B-9A9C-1CEBABDA3A33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C50F488-63D6-423B-9A9C-1CEBABDA3A33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C50F488-63D6-423B-9A9C-1CEBABDA3A33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C50F488-63D6-423B-9A9C-1CEBABDA3A33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
