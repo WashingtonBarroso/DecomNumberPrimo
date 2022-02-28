@@ -31,7 +31,7 @@ namespace Company.DecomNumber.Api.Controllers
         [ProducesResponseType(typeof(DecomNumberResponse), 200)]
         [ProducesResponseType(typeof(ValidationFailure), 400)]
         [ProducesResponseType(typeof(ProblemDetails), 500)]
-        public ActionResult<DecomNumberResponse> CalculeDivisoresEPrimo([FromQuery] DecomNumberViewModel decomNumberViewModel)
+        public ActionResult<DecomNumberResponse> CalculateDivisorsAndPrime([FromQuery] DecomNumberViewModel decomNumberViewModel)
         {
             if (decomNumberViewModel == null)
             {
@@ -39,14 +39,14 @@ namespace Company.DecomNumber.Api.Controllers
             }
 
             DecomNumberValidator validatorNumber = new DecomNumberValidator();
-            var validator = validatorNumber.Validate(new Company.DecomNumber.Lib.Service.DecomNumber() { NumberEntrada = decomNumberViewModel.NumberEntrada});
+            var validator = validatorNumber.Validate(new Company.DecomNumber.Lib.Service.DecomNumber() { NumberEntry = decomNumberViewModel.NumberEntry});
 
             if(!validator.IsValid)
             {
                 return BadRequest(validator.Errors);
             }
 
-            var response = _calculeService.CalculeDivisor(new DecomNumberViewModel() { NumberEntrada = decomNumberViewModel.NumberEntrada });
+            var response = _calculeService.CalculateDivisors(new DecomNumberViewModel() { NumberEntry = decomNumberViewModel.NumberEntry });
 
             return Ok(response);
         }

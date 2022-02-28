@@ -4,8 +4,8 @@ namespace Company.DecomNumber.Api.Response
 {
     public class DecomNumberResponse
     {
-        public long NumberEntrada { get; set; }
-        public List<long> NumberDivisores { get; set; }
-        public List<long> NumberPrimo { get; set; }
+        public long NumberEntry { get; set; }
+        public List<long> NumberDivisors { get; set; }
+        public List<long> NumberPrime { get; set; }
     }
 }

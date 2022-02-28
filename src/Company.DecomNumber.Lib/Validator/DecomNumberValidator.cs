@@ -10,8 +10,8 @@ namespace Company.DecomNumber.Lib.Validator
     {
         public DecomNumberValidator()
         {
-            RuleFor(x => x.NumberEntrada).NotEmpty().WithMessage("O campo é obrigatório");
-            RuleFor(x => x.NumberEntrada).InclusiveBetween(1, long.MaxValue).WithMessage("O valor tem que estar entre " + 1 + " e " + long.MaxValue);
+            RuleFor(x => x.NumberEntry).NotEmpty().WithMessage("O campo é obrigatório");
+            RuleFor(x => x.NumberEntry).InclusiveBetween(1, long.MaxValue).WithMessage("O valor tem que estar entre " + 1 + " e " + long.MaxValue);
         }
     }
 }

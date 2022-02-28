@@ -19,7 +19,7 @@ namespace Company.DecomNumber.Console
                 long.TryParse(System.Console.ReadLine(), out long num);
 
                 DecomNumberValidator validatorNumber = new DecomNumberValidator();
-                var validator = validatorNumber.Validate(new Company.DecomNumber.Lib.Service.DecomNumber() { NumberEntrada = num });
+                var validator = validatorNumber.Validate(new Company.DecomNumber.Lib.Service.DecomNumber() { NumberEntry = num });
 
                 if (!validator.IsValid)
                 {
@@ -29,7 +29,7 @@ namespace Company.DecomNumber.Console
                 }
                 else
                 {
-                    CalculeDivisor(num);
+                    CalculateDivisors(num);
                 }
 
                 System.Console.WriteLine();
@@ -39,14 +39,14 @@ namespace Company.DecomNumber.Console
 
         }
 
-        public static void CalculeDivisor(long num)
+        public static void CalculateDivisors(long num)
         {
             DecomNumberService calc = new DecomNumberService();
-            var retorno = calc.CalculeDivisor(num);
+            var retorno = calc.CalculateDivisors(num);
 
             System.Console.WriteLine("Número de entrada: " + num);
-            System.Console.WriteLine("Números divisores: " + string.Join(",", retorno.NumberDivisores));
-            System.Console.WriteLine("Divisores primos: " + string.Join(",", retorno.NumberPrimo));
+            System.Console.WriteLine("Números divisores: " + string.Join(",", retorno.NumbersDivisors));
+            System.Console.WriteLine("Divisores primos: " + string.Join(",", retorno.NumbersPrime));
             System.Console.WriteLine(">>>>>>>>>>>>>>>>>>>>>>>> \n");
         }
 

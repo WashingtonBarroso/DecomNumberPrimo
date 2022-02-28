@@ -4,8 +4,8 @@ namespace Company.DecomNumber.Lib.Service
 {
     public class DecomNumber
     {
-        public long NumberEntrada { get; set; }
-        public List<long> NumberDivisores { get; set; }
-        public List<long> NumberPrimo { get; set; }
+        public long NumberEntry { get; set; }
+        public List<long> NumbersDivisors { get; set; }
+        public List<long> NumbersPrime { get; set; }
     }
 }

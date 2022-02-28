@@ -10,24 +10,24 @@ namespace Company.DecomNumber.Lib.Service
         /// </summary>
         /// <param name="entrada"></param>
         /// <returns></returns>
-        public DecomNumber CalculeDivisor(long entrada)
+        public DecomNumber CalculateDivisors(long entrada)
         {
 
             DecomNumber decomNumber = new DecomNumber
             {
-                NumberEntrada = entrada,
-                NumberDivisores = new List<long>() { 1 },
-                NumberPrimo = new List<long>()
+                NumberEntry = entrada,
+                NumbersDivisors = new List<long>() { 1 },
+                NumbersPrime = new List<long>()
             };
             
             for (long i = 2; i <= entrada; i++)
             {
                 if (entrada % i == 0)
                 {
-                    decomNumber.NumberDivisores.Add(i);
+                    decomNumber.NumbersDivisors.Add(i);
 
                     if (IsNumberPrimo(i))
-                        decomNumber.NumberPrimo.Add(i);
+                        decomNumber.NumbersPrime.Add(i);
                 }
             }
 

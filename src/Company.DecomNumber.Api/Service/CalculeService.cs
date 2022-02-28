@@ -12,13 +12,13 @@ namespace Company.DecomNumber.Api.Service
         /// </summary>
         /// <param name="entrada"></param>
         /// <returns></returns>
-        public DecomNumberResponse CalculeDivisor(DecomNumberViewModel entrada)
+        public DecomNumberResponse CalculateDivisors(DecomNumberViewModel entrada)
         {
             DecomNumberService service = new DecomNumberService();
 
-            var response = service.CalculeDivisor(entrada.NumberEntrada);
+            var response = service.CalculateDivisors(entrada.NumberEntry);
 
-            return new DecomNumberResponse() { NumberEntrada = response.NumberEntrada, NumberDivisores = response.NumberDivisores, NumberPrimo = response.NumberPrimo }; 
+            return new DecomNumberResponse() { NumberEntry = response.NumberEntry, NumberDivisors = response.NumbersDivisors, NumberPrime = response.NumbersPrime }; 
         }
     }
 }

@@ -17,13 +17,13 @@ namespace Company.DecomNumber.Tests
         /// Verificar se metodo retorna uma lista com divisores de um número e seus divisores primos  
         /// </summary>
         [TestMethod]
-        public void CheckCalculeDivisoresComNumeroPositivosInteiros()
+        public void CheckCalculateDivisorsWithNumberPositives()
         {
             long num = 500;
 
-            var retorno = _decomNumberService.CalculeDivisor(num);
+            var retorno = _decomNumberService.CalculateDivisors(num);
 
-            Assert.IsTrue(retorno.NumberDivisores.Count > 0 && retorno.NumberPrimo.Count > 0);
+            Assert.IsTrue(retorno.NumbersDivisors.Count > 0 && retorno.NumbersPrime.Count > 0);
 
         }
 
@@ -31,13 +31,13 @@ namespace Company.DecomNumber.Tests
         /// Verificar se metodo re
         /// </summary>
         [TestMethod]
-        public void CheckCalculeDivisoresComZero()
+        public void CheckCalculateDivisorsWithZero()
         {
             long num = 0;
 
-            var retorno = _decomNumberService.CalculeDivisor(num);
+            var retorno = _decomNumberService.CalculateDivisors(num);
 
-            Assert.IsTrue(retorno.NumberDivisores.Count == 1 && retorno.NumberPrimo.Count == 0);
+            Assert.IsTrue(retorno.NumbersDivisors.Count == 1 && retorno.NumbersPrime.Count == 0);
         }
 
    
@@ -45,7 +45,7 @@ namespace Company.DecomNumber.Tests
         /// Verificar se metodo retorna que o número é primo
         /// </summary>
         [TestMethod]
-        public void CheckIsNumberPrimoComNumerosPrimos()
+        public void CheckPrimeNumberWithSuccess()
         {
             long num = 43;
 
@@ -58,7 +58,7 @@ namespace Company.DecomNumber.Tests
         /// Verificar se metodo retorna que o número não é primo
         /// </summary>
         [TestMethod]
-        public void CheckIsNumberPrimoComNumerosNaoPrimos()
+        public void CheckPrimeNumberWithError()
         {
             long num = 10;
 

@@ -2,6 +2,6 @@
 {
     public class DecomNumberViewModel
     {
-        public long NumberEntrada { get; set; }
+        public long NumberEntry { get; set; }
     }
 }

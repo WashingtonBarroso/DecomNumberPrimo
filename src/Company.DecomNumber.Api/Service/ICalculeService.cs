@@ -5,7 +5,7 @@ namespace Company.DecomNumber.Api.Service
 {
     public interface ICalculeService
     {
-        public DecomNumberResponse CalculeDivisor(DecomNumberViewModel entrada);
+        public DecomNumberResponse CalculateDivisors(DecomNumberViewModel entrada);
 
     }
 }
